@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pin-Up Casino Promo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <style>
+
+.promo-content,
+.advantages-content,
+.earn-content,
+.faq-content,
+.feedback-content {
+  max-width: 700px; /* было 1000px, стало меньше */
+  padding: 25px 30px; /* уменьшил внутренние отступы */
+  border-radius: 15px; /* можно чуть поменьше скругление */
+  box-shadow: 0 0 15px #ff3d00; /* чуть поменьше тень */
+}
+    .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--button-gap);
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.promo {
+  padding-top: 80px;
+}
+
+    :root {
+      --button-gap: 70px; /* Измени это значение, чтобы настроить расстояние между кнопками */
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url('back2.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9); /* уровень затемнения */
+      z-index: -1;
+    }
+
+    .header {
+    
+      padding: 10px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--button-gap);
+    }
+
+    .header img {
+      height: 40px;
+    }
+
+    .header nav {
+      display: flex;
+      gap: var(--button-gap);
+      align-items: center;
+    }
+
+    .header nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .register-btn {
+      background-color: #ff3d00;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .promo {
+      background: url('0014f248-402b-42ed-a958-16a25ed8e591.png') no-repeat center center;
+      background-size: cover;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .promo h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    .bonus-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: #ff3d00;
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+    .promo {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.promo-content {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff3d00;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  box-shadow: 0 0 20px #ff3d00;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.promo-img {
+  width: 150px;
+  height: auto;
+}
+
+.promo-text {
+  text-align: center;
+}
+
+.promo-text h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.bonus-btn {
+  background-color: #ff3d00;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 0 10px #ff3d00;
+  transition: background-color 0.3s;
+}
+
+.bonus-btn:hover {
+  background-color: #e63300;
+}
+
+.advantages-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.advantages-content {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ff3d00;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 20px #ff3d00;
+  max-width: 1000px;
+  width: 100%;
+  text-align: center;
+}
+
+.advantages-content h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.advantages-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: left;
+}
+
+.advantages-list li {
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+  color: #fff;
+}
+
+.advantages-list li::before {
+  content: '✓';
+  color: #00ff66;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.earn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.earn-content {
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #ff3d00;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 20px #ff3d00;
+  max-width: 1000px;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.earn-content h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.faq-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.faq-content {
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 0 0 20px #ff3d00;
+}
+
+.faq-content h2 {
+  font-size: 36px;
+  text-align: left;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ff3d00;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.faq-item {
+  margin-bottom: 25px;
+}
+
+.highlight {
+  color: white;
+}
+
+.pinup {
+  color: #ff3d00;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.feedback-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+}
+
+.feedback-content {
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 1000px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 20px #ff3d00;
+}
+
+.feedback-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+.feedback-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.feedback-text {
+  flex: 1;
+}
+
+.feedback-content h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+  border-bottom: 2px solid #ff3d00;
+  padding-bottom: 10px;
+}
+
+.stars {
+  color: #FFD700; /* золотой/жёлтый */
+  font-size: 18px;
+}
+
+.logo-block {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px 0;
+  box-shadow: 0 0 20px #ff3d00;
+}
+
+.logo-block {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .logo-image {
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px; /* увеличенный отступ под картинкой */
+  }
+
+  .logo-text {
+    font-size: 14px;
+    color: #acacac;
+  }
+
+  .promo-text h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 3rem;
+      background: linear-gradient(90deg, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* Для кроссбраузерности */
+      background-clip: text;
+      color: transparent;
+      margin: 0;
+    }
+
+
+.promo-text h1 {
+  font-size: 5rem; /* или 64px */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.promo-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.promo-content {
+  gap: 40px;
+}
+
+.promo-text {
+  text-align: left; /* если хочешь выравнивание по левому краю */
+}
+html {
+  scroll-behavior: smooth;
+}
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="logo.png" alt="Pin-Up Casino Logo">
+    <nav>
+      <a href="#feedbacks">FEEDBACKS</a>
+      <a href="#faq">FAQ</a>
+      <a href="#earnings">EARNINGS</a>
+      <a href="#advantages">ADVANTAGES</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+    <a href="#" class="register-btn">REGISTRATION</a>
+  </div>
+
+  <div class="promo" id="about">
+    <div class="promo-content">
+      <div class="promo-text">
+        <h1>120% + 250FS</h1>
+        <a href="#" class="bonus-btn">CLAIM BONUS</a>
+      </div>
+      <div class="promo-image">
+        <img src="slot-right.png" alt="Promo Image">
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="advantages-box" id="advantages">
+    <div class="advantages-content">
+      <h2>Advantages</h2>
+      <ul class="advantages-list">
+        <li>Legal operations under a Curaçao license</li>
+        <li>Over 6,000 slot machines available</li>
+        <li>Reward system with various bonuses</li>
+        <li>24/7 customer support</li>
+        <li>Accepts cryptocurrencies</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="earn-box" id="earnings">
+    <div class="earn-content">
+      <h2>How to earn money in <span style="color: #ff3d00;">Pin-Up</span></h2>
+      <p>Pin-Up’s game library offers thousands of entertainment options for every taste.</p>
+      <p><strong>Explore a wide range of slot machines</strong> available in both demo mode (risk-free) and real-money play with the chance to win actual cash. Whether you're into classic games or the latest releases, every Canadian player will find something they love from top-tier providers like NetEnt, Play’n GO, and more.</p>
+      <p><strong>Take advantage of Pin-Up’s no deposit bonus</strong> — the perfect way to start playing without upfront investment. Just activate the offer, meet the simple wagering requirements, and withdraw real winnings.</p>
+      <p><strong>Excitement, rewards, and real profits</strong> — it’s all waiting for you at Pin-Up!</p>
+    </div>
+  </div>
+  
+  <div class="faq-box" id="faq">
+    <div class="faq-content">
+      <h2>FAQ</h2>
+      <div class="faq-item">
+        <p><strong><span class="highlight">Is <span class="pinup">Pin-up</span> casino legal?</span></strong></p>
+        <p>Yes. The online platform is licensed by a reputable regulator in Curacao, which indicates the legality of the provision of services.</p>
+      </div>
+      <div class="faq-item">
+        <p><strong><span class="highlight">What bonus is available to new <span class="red">Canadian</span> players?</span></strong></p>
+        <p>For new users, we offer a welcome package for the first three deposits. You will receive an increase in the top-up amount and free spins.</p>
+      </div>
+      <div class="faq-item">
+        <p><strong><span class="highlight">How many accounts can I create in <span class="pinup">Pin-up</span>?</span></strong></p>
+        <p>New users can only create one account. Multiple accounts on the site are prohibited.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="feedback-box" id="feedbacks">
+    <div class="feedback-content">
+      <h2>Feedbacks</h2>
+  
+      <div class="feedback-item">
+        <img src="user1.jpg" alt="Ethan Miller">
+        <div class="feedback-text">
+          <h3>Ethan Miller <span class="stars">★★★★★</span></h3>
+          <p><strong>Awesome experience!</strong><br>
+          Been using Pin-Up for a few weeks — the interface is super intuitive and smooth. Love the variety of slots and the fast withdrawals. Got my winnings without any delays. Definitely one of the best casinos I’ve tried!</p>
+        </div>
+      </div>
+  
+      <div class="feedback-item">
+        <img src="user2.jpg" alt="Daniel Brooks">
+        <div class="feedback-text">
+          <h3>Daniel Brooks <span class="stars">★★★★★</span></h3>
+          <p><strong>Top-notch platform!</strong><br>
+          Huge game selection, responsive support, and that no deposit bonus really helped me get started. Everything runs flawlessly. Great for beginners and seasoned players alike. Highly recommend!</p>
+        </div>
+      </div>
+  
+      <div class="feedback-item">
+        <img src="user3.jpg" alt="Oliver Hayes">
+        <div class="feedback-text">
+          <h3>Oliver Hayes <span class="stars">★★★★☆</span></h3>
+          <p><strong>Good overall!</strong><br>
+          The game variety is solid and the site runs smoothly. I had a small issue with the bonus activation at first, but support responded quickly and fixed it. Would be perfect if they added a dedicated poker section. Still, a great place to play!</p>
+        </div>
+      </div>
+    </div>
+  </div> <!-- закрываем .feedback-content -->
+</div>   <!-- закрываем .feedback-box -->
+
+
+<div class="logo-block">
+  <img src="logo.png" alt="Logo" class="logo-image">
+  <div class="logo-text">ALL RIGHTS RESERVED © 2025</div>
+</div>
+
+
+
+</body>
+
+</html>
