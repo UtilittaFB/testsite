@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
   <style>
 
-.promo-content,
+    .promo-content,
 .advantages-content,
 .earn-content,
 .faq-content,
@@ -106,16 +106,23 @@
     }
 
     .bonus-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 15px 30px;
-      background-color: #ff3d00;
-      color: white;
-      font-size: 18px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 8px;
-    }
+  background-color: #ff3d00;
+  color: white;
+  padding: 25px 60px; /* увеличен padding */
+  border-radius: 15px; /* более скруглённая */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 28px; /* увеличен шрифт */
+  box-shadow: 0 0 20px #ff3d00;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.bonus-btn:hover {
+  background-color: #e63300;
+  transform: scale(0.7);
+}
+
+
     .promo {
   padding: 50px 20px;
   display: flex;
@@ -146,27 +153,7 @@
   text-align: center;
 }
 
-.promo-text h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-  color: white;
-}
 
-.bonus-btn {
-  background-color: #ff3d00;
-  color: white;
-  padding: 15px 35px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
-  box-shadow: 0 0 10px #ff3d00;
-  transition: background-color 0.3s;
-}
-
-.bonus-btn:hover {
-  background-color: #e63300;
-}
 
 .advantages-box {
   display: flex;
@@ -256,6 +243,8 @@
 }
 
 .faq-content {
+  background: rgba(0, 0, 0, 0.8); /* добавлено */
+  border: 2px solid #ff3d00;      /* добавлено */
   border-radius: 20px;
   padding: 40px;
   max-width: 1000px;
@@ -301,6 +290,8 @@
 }
 
 .feedback-content {
+  background: rgba(0, 0, 0, 0.8); /* добавлено */
+  border: 2px solid #ff3d00;      /* добавлено */
   border-radius: 20px;
   padding: 40px;
   max-width: 1000px;
@@ -360,25 +351,13 @@
 
   .logo-text {
     font-size: 14px;
-    color: #acacac;
+    color: #ececec;
   }
 
+
+
   .promo-text h1 {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 600;
-      font-size: 3rem;
-      background: linear-gradient(90deg, #ff6a00, #ee0979);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      /* Для кроссбраузерности */
-      background-clip: text;
-      color: transparent;
-      margin: 0;
-    }
-
-
-.promo-text h1 {
-  font-size: 5rem; /* или 64px */
+  font-size: 5rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   background: linear-gradient(90deg, #ff6a00, #ee0979);
@@ -386,9 +365,8 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin: 0;
+  margin: 0 0 30px 0; /* ← нижний отступ 30px */
 }
-
 .promo-image img {
   width: 400px;
   height: auto;
@@ -406,9 +384,151 @@
 html {
   scroll-behavior: smooth;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.claim-bonus-container {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 760px;
+  padding: 24px 36px;
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.8); /* более тёмная затемнённая середина */
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0 0 15px #ff3d00; /* чуть поменьше тень */
+
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+
+  z-index: 1000;
+}
+
+.bonus-text {
+  flex: 1;
+  margin-right: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.claim-bonus-button {
+  background-color: #ff3d00;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 16px 32px;
+
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  box-shadow: 0 0 15px #ff3d00; /* чуть поменьше тень */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.claim-bonus-button:hover {
+  background-color: #ff3d00;
+  transform: scale(1.08);
+}
+
+/* Анимация "пульс" */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.claim-bonus-button {
+  /* (всё, что было — оставить) */
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* добавим немного пространства между элементами */
+    padding: 15px;
+  }
+
+  .header nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .register-btn {
+    display: inline-block;
+    width: 100%; /* чтобы кнопка растянулась на всю ширину */
+    max-width: 300px; /* ограничим максимальную ширину */
+    text-align: center;
+    padding: 12px 0;
+    font-size: 18px;
+    margin-top: 15px;
+    border-radius: 8px;
+  }
+}
+
+/* Общий стиль кнопки */
+.registration-button {
+    padding: 10px 24px;
+    font-size: 16px;
+    background-color: #ff4c00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+/* Контейнер для позиционирования */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+/* Мобильная версия: поднимаем кнопку выше */
+@media (max-width: 768px) {
+    .registration-button {
+        margin-top: 10px;      /* Отступ сверху */
+        margin-bottom: 0;      /* Убираем лишний отступ снизу */
+        position: relative;
+        top: -20px;            /* Поднимаем кнопку вверх */
+    }
+}
+
+
   </style>
 </head>
 <body>
+
+
+  <div style="height: 60px;"></div>
+
 
   <div class="header">
     <img src="logo.png" alt="Pin-Up Casino Logo">
@@ -419,9 +539,17 @@ html {
       <a href="#advantages">ADVANTAGES</a>
       <a href="#about">ABOUT</a>
     </nav>
-    <a href="#" class="register-btn">REGISTRATION</a>
+    <div class="header-container">
+      <button class="registration-button">Registration</button>
   </div>
-
+  
+  </div>
+  <div class="claim-bonus-container">
+    <span class="bonus-text">The best bonus for online games with Pin-up</span>
+    <button class="claim-bonus-button">Claim Bonus</button>
+  </div>
+  
+  
   <div class="promo" id="about">
     <div class="promo-content">
       <div class="promo-text">
@@ -516,6 +644,7 @@ html {
   <div class="logo-text">ALL RIGHTS RESERVED © 2025</div>
 </div>
 
+<div style="height: 140px;"></div>
 
 
 </body>
